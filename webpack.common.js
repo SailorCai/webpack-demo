@@ -9,12 +9,12 @@
    plugins: [
      new CleanWebpackPlugin(['dist']),
      new HtmlWebpackPlugin({
-       title: 'Production'
+       title: 'Caching'
      })
    ],
    output: {
-     filename: '[name].bundle.js',
-     chunkFilename: '[name].bundle.js',  //决定非入口chunk的名称
+     filename: '[name].[chunkhash].js',
+     chunkFilename: '[name].[chunkhash].js',  //决定非入口chunk的名称
      path: path.resolve(__dirname, 'dist')
    }
  };
